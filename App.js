@@ -7,6 +7,7 @@ import { EvaIconsPack } from "@ui-kitten/eva-icons";
 import { AppNavigator } from "./components/navigation.component";
 import { default as theme } from "./theme.json";
 import { default as mapping } from "./mapping.json";
+
 import {
   useFonts,
   JosefinSans_100Thin,
@@ -29,6 +30,9 @@ export default () => {
   let [fontsLoaded] = useFonts({
     JosefinSans_500Medium,
     JosefinSans_400Regular,
+    JosefinSans_400Regular_Italic,
+    JosefinSans_600SemiBold,
+    JosefinSans_700Bold,
   });
   if (!fontsLoaded) {
     return <AppLoading />;
