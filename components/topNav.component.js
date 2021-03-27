@@ -9,6 +9,9 @@ import {
 export const TopNav = ({ title }) => {
   const BackIcon = (props) => <Icon {...props} name="arrow-back" />;
   const BackAction = () => <TopNavigationAction icon={BackIcon} />;
+  const navigateBack = () => {
+    navigation.goBack();
+  };
 
   return (
     <TopNavigation
@@ -28,6 +31,7 @@ export const TopNav = ({ title }) => {
         borderWidth: 2,
         marginTop: 3,
       }}
+      onPress={navigateBack}
     />
   );
 };
