@@ -7,7 +7,9 @@ import {
 } from "@ui-kitten/components";
 
 export const TopNav = ({ title }) => {
-  const BackIcon = (props) => <Icon {...props} name="arrow-back" />;
+  const BackIcon = (props) => (
+    <Icon {...props} name="arrow-back" onPress={navigateBack} />
+  );
   const BackAction = () => <TopNavigationAction icon={BackIcon} />;
   const navigateBack = () => {
     navigation.goBack();
@@ -31,7 +33,6 @@ export const TopNav = ({ title }) => {
         borderWidth: 2,
         marginTop: 3,
       }}
-      onPress={navigateBack}
     />
   );
 };
