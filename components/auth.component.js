@@ -3,8 +3,8 @@ import { Image } from "react-native";
 import { Button, Layout, Icon, useTheme, Text } from "@ui-kitten/components";
 export const AuthScreen = ({ navigation }) => {
   const theme = useTheme();
-  const navigateOTP = () => {
-    navigation.navigate();
+  const navigateDashboard = () => {
+    navigation.navigate("Dashboard");
   };
 
   return (
@@ -25,6 +25,7 @@ export const AuthScreen = ({ navigation }) => {
           <Button
             style={{ margin: 2, width: "50%" }}
             accessoryLeft={(props) => <Icon {...props} name="google-outline" />}
+            onPress={navigateDashboard}
           >
             CONNECT
           </Button>
