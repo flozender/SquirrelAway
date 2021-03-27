@@ -6,7 +6,7 @@ import {
   TopNavigationAction,
 } from "@ui-kitten/components";
 
-export const TopNav = ({ title }) => {
+export const TopNav = ({ title, navigation }) => {
   const BackIcon = (props) => (
     <Icon {...props} name="arrow-back" onPress={navigateBack} />
   );
