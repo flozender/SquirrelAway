@@ -28,6 +28,7 @@ import {
 
 export default () => {
   let [fontsLoaded] = useFonts({
+    JosefinSans_300Light,
     JosefinSans_500Medium,
     JosefinSans_400Regular,
     JosefinSans_400Regular_Italic,
