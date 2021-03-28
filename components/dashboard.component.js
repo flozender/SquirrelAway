@@ -11,7 +11,6 @@ export const DashboardScreen = ({ navigation }) => {
     };
   }
   const navigateToPage = (page) => {
-    console.log(page);
     navigation.navigate(page);
   };
 

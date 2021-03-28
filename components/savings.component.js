@@ -15,7 +15,7 @@ export const SavingsScreen = ({ navigation }) => {
       <TopNav title={"Savings"} navigation={navigation} />
       <Layout
         style={{
-          flex: 1,
+          display: "flex",
           alignItems: "center",
         }}
       >
@@ -25,7 +25,7 @@ export const SavingsScreen = ({ navigation }) => {
             flexDirection: "column",
             alignItems: "center",
             marginVertical: 30,
-            padding: 10,
+            padding: 20,
             fontFamily: "JosefinSans_500Medium",
             backgroundColor: "#f8f9fb",
             borderColor: "#c3d0d9",
@@ -34,19 +34,30 @@ export const SavingsScreen = ({ navigation }) => {
         >
           <Text
             style={{
-              fontFamily: "JosefinSans_500Medium",
+              fontFamily: "JosefinSans_300Light",
               fontSize: 18,
             }}
           >
             Your Savings
           </Text>
           <Text
-            style={{ fontWeight: "bold", fontSize: 40, textAlign: "center" }}
+            style={{
+              fontWeight: "bold",
+              fontSize: 40,
+              textAlign: "center",
+              fontFamily: "JosefinSans_700Bold",
+            }}
           >
             $6637
           </Text>
         </Layout>
-        <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+        <Text
+          style={{
+            fontSize: 18,
+            fontFamily: "JosefinSans_500Medium",
+            marginBottom: 25,
+          }}
+        >
           Your Saving Goals
         </Text>
       </Layout>
@@ -57,38 +68,45 @@ export const SavingsScreen = ({ navigation }) => {
             flexDirection: "row",
             justifyContent: "space-evenly",
             alignItems: "center",
-            paddingBottom: 40,
+            paddingBottom: 20,
             backgroundColor: "#fff",
           }}
         >
-          <View>
-            <ProgressCircle
-              percent={30}
-              radius={50}
-              borderWidth={8}
-              color="#3399FF"
-              shadowColor="#999"
-              bgColor="#fff"
-            >
-              <Text style={{ fontSize: 20 }}>{"30%"}</Text>
-            </ProgressCircle>
-            <Text style={{ fontSize: 20, textAlign: "center" }}>New Car</Text>
-          </View>
-          <View>
-            <ProgressCircle
-              percent={66}
-              radius={50}
-              borderWidth={8}
-              color="red"
-              shadowColor="#999"
-              bgColor="#fff"
-            >
-              <Text style={{ fontSize: 20 }}>{"66%"}</Text>
-            </ProgressCircle>
-            <Text style={{ fontSize: 20, textAlign: "center" }}>
-              Text Books
-            </Text>
-          </View>
+          <Progress
+            name="New Car"
+            percentage={30}
+            color="#3399FF"
+            shadow="#abcff1"
+          />
+          <Progress
+            name="Text Books"
+            percentage={66}
+            color="red"
+            shadow="#edb6bf"
+          />
+        </View>
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+            paddingBottom: 20,
+            backgroundColor: "#fff",
+          }}
+        >
+          <Progress
+            name="Laptop"
+            percentage={55}
+            color="#f8c325"
+            shadow="#fce7a8"
+          />
+          <Progress
+            name="Furniture"
+            percentage={19}
+            color="#be34d0"
+            shadow="#e5afed"
+          />
         </View>
         <View
           style={{
@@ -99,45 +117,75 @@ export const SavingsScreen = ({ navigation }) => {
             backgroundColor: "#fff",
           }}
         >
-          <View>
-            <ProgressCircle
-              percent={100}
-              radius={50}
-              borderWidth={8}
-              color="#00FA9A"
-              shadowColor="#999"
-              bgColor="#fff"
-            >
-              <Text style={{ fontSize: 20 }}>{"100%"}</Text>
-            </ProgressCircle>
-            <Text style={{ fontSize: 20, textAlign: "center" }}>
-              Gift for Alex
-            </Text>
-          </View>
+          <Progress
+            name="Gift for Alex"
+            percentage={89}
+            color="#00FA9A"
+            shadow="#a1deda"
+          />
+
           <View>
             <ProgressCircle
               percent={0}
               radius={50}
               borderWidth={8}
-              color="gray"
-              shadowColor="#999"
+              color="#bcc4cc"
+              shadowColor="#bcc4cc"
               bgColor="#fff"
             >
               <Text
                 style={{
                   fontSize: 40,
                   fontWeight: "bold",
-                  color: "gray",
+                  color: "#bcc4cc",
                   alignSelf: "center",
                 }}
               >
-                {"+"}
+                +
               </Text>
             </ProgressCircle>
-            <Text style={{ fontSize: 20, textAlign: "center" }}>New Goal</Text>
+            <Text
+              style={{
+                fontSize: 20,
+                textAlign: "center",
+                fontFamily: "JosefinSans_500Medium",
+                marginTop: 10,
+              }}
+            >
+              New Goal
+            </Text>
           </View>
         </View>
       </View>
     </>
+  );
+};
+
+const Progress = ({ name, percentage, color, shadow }) => {
+  return (
+    <View>
+      <ProgressCircle
+        percent={percentage}
+        radius={50}
+        borderWidth={10}
+        color={color}
+        shadowColor={shadow}
+        bgColor="#fff"
+      >
+        <Text style={{ fontSize: 20, fontFamily: "JosefinSans_700Bold" }}>
+          {`${percentage}%`}
+        </Text>
+      </ProgressCircle>
+      <Text
+        style={{
+          fontSize: 20,
+          textAlign: "center",
+          fontFamily: "JosefinSans_500Medium",
+          marginTop: 10,
+        }}
+      >
+        {name}
+      </Text>
+    </View>
   );
 };
