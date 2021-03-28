@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Layout, Icon, Text, Avatar } from "@ui-kitten/components";
 import { PieChart } from "react-native-svg-charts";
-import { useState } from "react";
 
 export const DashboardScreen = ({ navigation }) => {
   const [touch, setTouch] = useState(false);
@@ -32,6 +31,7 @@ export const DashboardScreen = ({ navigation }) => {
         display: "flex",
         height: "100%",
         alignItems: "center",
+        width: "100%",
       }}
     >
       <Layout
@@ -71,7 +71,6 @@ export const DashboardScreen = ({ navigation }) => {
           backgroundColor: "#f8f9fb",
           width: "70%",
           display: "flex",
-          alignItems: "center",
           borderColor: "#c3d0d9",
           borderWidth: 2,
           marginBottom: 20,
@@ -104,6 +103,7 @@ export const DashboardScreen = ({ navigation }) => {
             color: "black",
             fontFamily: "JosefinSans_700Bold",
             marginBottom: 10,
+            alignSelf: "center",
           }}
           category="h1"
         >

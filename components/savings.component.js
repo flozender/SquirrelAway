@@ -24,7 +24,6 @@ export const SavingsScreen = ({ navigation }) => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            // justifyContent: "space-evenly",
             marginVertical: 30,
             padding: 10,
             fontFamily: "JosefinSans_500Medium",
