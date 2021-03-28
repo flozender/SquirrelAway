@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     paddingTop: StatusBar.currentHeight,
   },
   scrollView: {
-    backgroundColor: 'pink',
+    backgroundColor: 'white',
   },
   text: {
     fontSize: 42,
@@ -23,7 +23,7 @@ export const ErraticSpendingsScreen = ({ navigation }) => {
   };
 
   return (
-    <ScrollView style={styles.scrollView}>
+    <ScrollView>
       <TopNav title="Erratic Spendings" navigation={navigation} />
       <Layout
         style={{
@@ -59,33 +59,31 @@ export const ErraticSpendingsScreen = ({ navigation }) => {
             $23-$25
           </Text>
         </Layout>
-        <Card name="Starbucks" date="23/04/21" price={144} />
-        <Card name="Costco" date="06/04/21" price={299} />
-        <Card name="Target" date="03/04/21" price={90} />
-        <Card name="Macy's" date="03/04/21" price={899} />
-        <Card name="Taco Bell" date="02/04/21" price={100} />
-        <Card name="Amazon" date="01/04/21" price={600} />
-        <Card name="Best Buy" date="01/04/21" price={250} />
-        <Card name="TONI&GUY" date="01/04/21" price={80} />
-        <Card name="Mc Donald's" date="01/04/21" price={500} />
-        <Card name="Mc Donald's" date="01/04/21" price={220} />
-        <Card name="Mc Donald's" date="01/04/21" price={350} />
-        <Card name="Mc Donald's" date="01/04/21" price={20} />
-        <Card name="Mc Donald's" date="01/04/21" price={400} />
+        <Card name="Starbucks" date="17/03/21" price={20} />
+        <Card name="Costco" date="16/03/21" price={95} />
+        <Card name="Target" date="13/03/21" price={90} />
+        <Card name="Macy's" date="13/03/21" price={899} />
+        <Card name="Taco Bell" date="12/03/21" price={100} />
+        <Card name="Amazon" date="12/03/21" price={613} />
+        <Card name="Costco" date="11/03/21" price={49} />
+        <Card name="Best Buy" date="09/03/21" price={25} />
+        <Card name="Toni & Guy" date="08/03/21" price={80} />
+        <Card name="McDonald's" date="07/03/21" price={50} />
+        <Card name="Macy's" date="05/03/21" price={220} />
+        <Card name="7-Eleven" date="03/03/21" price={75} />
+        <Card name="KFC" date="03/03/21" price={20} />
+        <Card name="Build A Bear" date="01/03/21" price={100} />
 
       </Layout>
     </ScrollView>
-    // <>
-
-    // </>
   );
 };
 
-export const Card = ({ name, date, price }) => {
+const Card = ({ name, date, price }) => {
   let color = "#00FA9A";
   if (price >= 300) {
     color = "#cc495d";
-  } else if (price >= 200 && price < 300) {
+  } else if (price >= 100 && price < 300) {
     color = "#f8c325";
   }
   return (
