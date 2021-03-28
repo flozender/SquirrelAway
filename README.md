@@ -34,8 +34,8 @@ We keep track of your spendings throughout the month and help make predictions o
 
 We first used Whimsical to design our application and create a wireframe. We then used React Native for the frontend, paired with a NodeJS backend server. We wrote our CSS but used a UI Library called UI Kitten. We had a whale of a time with this stack!
 
-![](./devpost/screens)
-![](./devpost/savings)
+![](./devpost/screens.png)
+![](./devpost/savings.png)
 
 ## 🚧 Challenges we ran into
 
