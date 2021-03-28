@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Layout, Icon, Text } from "@ui-kitten/components";
 import { TopNav } from "./topNav.component";
-import { StyleSheet, SafeAreaView, ScrollView, StatusBar } from 'react-native';
+import { StyleSheet, SafeAreaView, ScrollView, StatusBar } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -9,13 +9,12 @@ const styles = StyleSheet.create({
     paddingTop: StatusBar.currentHeight,
   },
   scrollView: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
   },
   text: {
     fontSize: 42,
   },
 });
-
 
 export const ExpensesScreen = ({ navigation }) => {
   const navigateToPage = (page) => {
@@ -46,6 +45,7 @@ export const ExpensesScreen = ({ navigation }) => {
         <Card name="7-Eleven" date="03/03/21" price={75} />
         <Card name="KFC" date="03/03/21" price={20} />
         <Card name="Build A Bear" date="01/03/21" price={100} />
+        <Card name="Dollar Store" date="01/03/21" price={2} />
         <Icon
           name="more-horizontal-outline"
           fill="gray"
@@ -86,7 +86,7 @@ const Card = ({ name, date, price, margin = 0 }) => {
       <Text
         category="h4"
         style={{
-          fontFamily: "JosefinSans_600SemiBold"
+          fontFamily: "JosefinSans_500Medium",
         }}
       >
         {name}
@@ -95,7 +95,7 @@ const Card = ({ name, date, price, margin = 0 }) => {
         style={{
           marginRight: 20,
           fontSize: 30,
-          fontFamily: "JosefinSans_700Bold",
+          fontFamily: "JosefinSans_600SemiBold",
           color,
         }}
       >
