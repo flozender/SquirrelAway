@@ -32,7 +32,7 @@ export const PredictionScreen = ({ navigation }) => {
       width: "75%"
     },
     dashedCard: {
-      marginTop: 20,
+      marginTop: 70,
       alignItems: 'center',
       justifyContent: 'center',
       display: 'flex',
@@ -43,7 +43,7 @@ export const PredictionScreen = ({ navigation }) => {
     },
     amountText: {
       fontWeight: 'bold',
-      fontSize: 26,
+      fontSize: 30,
       justifyContent: 'center',
       marginLeft: '20%'
     },
@@ -58,7 +58,7 @@ export const PredictionScreen = ({ navigation }) => {
     },
     innerLayout: {
       display: 'flex',
-      flexDirection: 'row'
+      flexDirection: 'row',
     },
     arrowIcon: {
       width: 20,
@@ -74,25 +74,25 @@ export const PredictionScreen = ({ navigation }) => {
         <Text style={styles.infoText}>Based on your spending patterns in the last 6 months</Text>
 
         <Card style={styles.dashedCard}>
-          <Text style={{ fontFamily: 'JosefinSans_300Light' }}>Last month, you spent</Text>
+          <Text style={{ fontFamily: 'JosefinSans_500Medium' }}>Last month, you spent</Text>
           <Text style={styles.amountText}>$7224</Text>
         </Card>
 
         <Card style={styles.plainCard}>
-          <Text style={{ fontFamily: 'JosefinSans_300Light' }}>This month, you'll need</Text>
+          <Text style={{ fontFamily: 'JosefinSans_500Medium' }}>This month, you'll need</Text>
           <Layout style={styles.innerLayout}>
             <Text style={styles.amountText}>$6559</Text>
             <Icon style={styles.arrowIcon} fill='green' name='arrow-down' />
-            <Text style={{ fontSize: 12, marginTop: 10, position: 'relative', color: 'green' }}>-665 </Text>
+            <Text style={{ fontSize: 15, marginTop: 7, position: 'relative', color: 'green' }}>-665 </Text>
           </Layout>
         </Card>
 
         <Card style={styles.plainCard}>
-          <Text style={{ fontFamily: 'JosefinSans_300Light' }}>Next month, may need</Text>
+          <Text style={{ fontFamily: 'JosefinSans_500Medium' }}>Next month, may need</Text>
           <Layout style={styles.innerLayout}>
             <Text style={styles.amountText}>$6625</Text>
             <Icon style={styles.arrowIcon} fill='red' name='arrow-up' />
-            <Text style={{ fontSize: 12, marginTop: 10, position: 'relative', color: 'red' }}>+66</Text>
+            <Text style={{ fontSize: 15, marginTop: 7, position: 'relative', color: 'red' }}>+66</Text>
           </Layout>
         </Card>
 
