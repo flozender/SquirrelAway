@@ -6,6 +6,7 @@ import { DashboardScreen } from "./dashboard.component";
 import { SavingsScreen } from "./savings.component";
 import { ErraticSpendingsScreen } from "./spendings.component";
 import { ExpensesScreen } from "./expenses.component";
+import { PredictionScreen } from "./prediction.component";
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -16,6 +17,7 @@ const HomeNavigator = () => (
     <Screen name="Savings" component={SavingsScreen} />
     <Screen name="Erratic Spendings" component={ErraticSpendingsScreen} />
     <Screen name="Expenses" component={ExpensesScreen} />
+    <Screen name="Predictions" component={PredictionScreen} />
   </Navigator>
 );
 
