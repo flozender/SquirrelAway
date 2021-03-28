@@ -1,6 +1,21 @@
 import React, { useState } from "react";
 import { Button, Layout, Icon, Text } from "@ui-kitten/components";
 import { TopNav } from "./topNav.component";
+import { StyleSheet, SafeAreaView, ScrollView, StatusBar } from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: StatusBar.currentHeight,
+  },
+  scrollView: {
+    backgroundColor: 'pink',
+  },
+  text: {
+    fontSize: 42,
+  },
+});
+
 
 export const ErraticSpendingsScreen = ({ navigation }) => {
   const navigateToPage = (page) => {
@@ -8,7 +23,7 @@ export const ErraticSpendingsScreen = ({ navigation }) => {
   };
 
   return (
-    <>
+    <ScrollView style={styles.scrollView}>
       <TopNav title="Erratic Spendings" navigation={navigation} />
       <Layout
         style={{
@@ -49,21 +64,29 @@ export const ErraticSpendingsScreen = ({ navigation }) => {
         <Card name="Target" date="03/04/21" price={90} />
         <Card name="Macy's" date="03/04/21" price={899} />
         <Card name="Taco Bell" date="02/04/21" price={100} />
-        <Card name="Macy's" date="01/04/21" price={200} />
-        <Icon
-          name="more-horizontal-outline"
-          fill="gray"
-          style={{ height: 30, width: 30 }}
-        />
+        <Card name="Amazon" date="01/04/21" price={600} />
+        <Card name="Best Buy" date="01/04/21" price={250} />
+        <Card name="TONI&GUY" date="01/04/21" price={80} />
+        <Card name="Mc Donald's" date="01/04/21" price={500} />
+        <Card name="Mc Donald's" date="01/04/21" price={220} />
+        <Card name="Mc Donald's" date="01/04/21" price={350} />
+        <Card name="Mc Donald's" date="01/04/21" price={20} />
+        <Card name="Mc Donald's" date="01/04/21" price={400} />
+
       </Layout>
-    </>
+    </ScrollView>
+    // <>
+
+    // </>
   );
 };
 
 export const Card = ({ name, date, price }) => {
-  let color = "#f8c325";
-  if (price >= 200) {
+  let color = "#00FA9A";
+  if (price >= 300) {
     color = "#cc495d";
+  } else if (price >= 200 && price < 300) {
+    color = "#f8c325";
   }
   return (
     <Layout
