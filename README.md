@@ -8,7 +8,7 @@ Saving money can be hard, especially when you're on a budget. Krishna and I were
 
 Squirrel Away is a mobile application that helps you save and be on top of your finance game just as well as a squirrel does. [Relevant Clip](https://youtu.be/cZkAP-CQlhA?t=25) There are tons of finance trackers that exist but they all have one catch - you gotta track it yourself. With SquirrelAway, you don't need to. Connect with your Google Account, and our little squirrels will check (read: parse) your emails for any banking transactions that you may perform. Here's a breakdown of all the features we offer.
 
-![]('./devpost/workflow.png')
+![](./devpost/workflow.png)
 
 ### Dashboard 🎯
 
@@ -34,8 +34,8 @@ We keep track of your spendings throughout the month and help make predictions o
 
 We first used Whimsical to design our application and create a wireframe. We then used React Native for the frontend, paired with a NodeJS backend server. We wrote our CSS but used a UI Library called UI Kitten. We had a whale of a time with this stack!
 
-![]('./devpost/screens')
-![]('./devpost/savings')
+![](./devpost/screens)
+![](./devpost/savings)
 
 ## 🚧 Challenges we ran into
 
