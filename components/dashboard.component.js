@@ -20,7 +20,7 @@ export const DashboardScreen = ({ navigation }) => {
       value,
       svg: {
         fill: index === 1 ? "#ef476f" : "#FFD166",
-        onPress: () => console.log("press", index),
+        onPress: () => navigateToPage("Expenses"),
       },
       key: `pie-${index}`,
     }));
@@ -65,7 +65,10 @@ export const DashboardScreen = ({ navigation }) => {
       </Layout>
       <Layout
         onTouchStart={() => setTouch(true)}
-        onTouchEnd={() => setTouch(false)}
+        onTouchEnd={() => {
+          setTouch(false);
+          navigateToPage("Expenses");
+        }}
         style={{
           backgroundColor: "#f8f9fb",
           width: "70%",
