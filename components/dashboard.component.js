@@ -118,9 +118,9 @@ export const DashboardScreen = ({ navigation }) => {
         handlePress={() => navigateToPage("Savings")}
       />
       <Card
-        name="Erratic Spendings"
+        name="Spendings"
         icon="alert-circle-outline"
-        handlePress={() => navigateToPage("Erratic Spendings")}
+        handlePress={() => navigateToPage("Spendings")}
       />
       <Card
         name="Analysis"
@@ -153,13 +153,16 @@ export const Card = ({ name, icon, handlePress }) => {
       }}
       style={{
         backgroundColor: "#f8f9fb",
-        width: "100%",
-        height: 50,
+        borderColor: "#c3d0d9",
+        borderWidth: 2,
+        width: "80%",
+        height: 60,
         marginBottom: 12,
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
+        borderRadius: 1,
         ...hoverStyles,
       }}
     >
@@ -171,7 +174,7 @@ export const Card = ({ name, icon, handlePress }) => {
       <Text
         category="h4"
         style={{
-          fontFamily: "JosefinSans_500Medium",
+          fontFamily: "JosefinSans_400Regular",
         }}
       >
         {name}

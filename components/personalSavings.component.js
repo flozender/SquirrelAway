@@ -12,7 +12,7 @@ import {
 import { TopNav } from "./topNav.component";
 import { View } from "react-native";
 
-export const SavingsScreen = ({ navigation }) => {
+export const PersonalSavingsScreen = ({ navigation }) => {
   const theme = useTheme();
 
   const [visible, setVisible] = useState(false);
@@ -147,15 +147,12 @@ export const SavingsScreen = ({ navigation }) => {
               >
                 New Savings Plan
               </Text>
-              <Input
-                placeholder="Saving for..."
-                style={{ marginVertical: 5 }}
-              />
+              <Input placeholder="Saving for" style={{ marginVertical: 5 }} />
               <Input
                 accessoryLeft={(p) => (
                   <Text style={{ color: "gray", fontSize: 15 }}>$</Text>
                 )}
-                placeholder="Need to save..."
+                placeholder="Need to save"
                 style={{ marginVertical: 5 }}
               />
               <Button

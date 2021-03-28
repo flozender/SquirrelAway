@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Layout, Icon, Text } from "@ui-kitten/components";
 import { TopNav } from "./topNav.component";
-import { StyleSheet, SafeAreaView, ScrollView, StatusBar } from 'react-native';
+import { StyleSheet, SafeAreaView, ScrollView, StatusBar } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -9,15 +9,14 @@ const styles = StyleSheet.create({
     paddingTop: StatusBar.currentHeight,
   },
   scrollView: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
   },
   text: {
     fontSize: 42,
   },
 });
 
-
-export const ErraticSpendingsScreen = ({ navigation }) => {
+export const SpendingsScreen = ({ navigation }) => {
   const navigateToPage = (page) => {
     navigation.navigate(page);
   };
