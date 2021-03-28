@@ -83,9 +83,7 @@ export const DashboardScreen = ({ navigation }) => {
 
         <Button
           appearance="ghost"
-          accessoryRight={(p) => (
-            <Icon {...p} fill="gray" name="arrow-ios-downward-outline" />
-          )}
+          accessoryRight={(p) => <Icon {...p} fill="gray" name="arrow-down" />}
         >
           {(e) => (
             <Text
