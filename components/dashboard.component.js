@@ -113,7 +113,7 @@ export const DashboardScreen = ({ navigation }) => {
       <Card
         name="Savings"
         icon="pie-chart-outline"
-        handlePress={() => navigateToPage("Savings")}
+        handlePress={() => navigateToPage("Savings Dashboard")}
       />
       <Card
         name="Spendings"
