@@ -24,6 +24,9 @@ export const SavingsDashboardScreen = ({ navigation }) => {
     {
       name: "Save the Turtles",
     },
+    {
+      name: "Johnathan's Birthday",
+    },
   ]);
 
   let hoverStyles = {};
