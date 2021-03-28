@@ -26,13 +26,13 @@ export const PredictionScreen = ({ navigation }) => {
     infoText: {
       fontStyle: "italic",
       color: "gray",
-      marginTop: 5,
-      marginBottom: 10,
+      marginTop: 30,
+      marginBottom: 0,
       textAlign: "center",
       width: "75%"
     },
     dashedCard: {
-      marginTop: 70,
+      marginTop: 30,
       alignItems: 'center',
       justifyContent: 'center',
       display: 'flex',
