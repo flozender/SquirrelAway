@@ -39,7 +39,8 @@ export const PredictionScreen = ({ navigation }) => {
       width: '60%',
       borderWidth: 1,
       borderColor: 'gray',
-      borderStyle: 'dashed'
+      borderStyle: 'dashed',
+      backgroundColor: "#f8f9fb"
     },
     amountText: {
       fontWeight: 'bold',
@@ -54,11 +55,13 @@ export const PredictionScreen = ({ navigation }) => {
       display: 'flex',
       width: '60%',
       borderWidth: 1,
-      borderColor: '#A9A9A9'
+      borderColor: '#A9A9A9',
+      backgroundColor: "#f8f9fb"
     },
     innerLayout: {
       display: 'flex',
       flexDirection: 'row',
+      backgroundColor: "#f8f9fb"
     },
     arrowIcon: {
       width: 20,

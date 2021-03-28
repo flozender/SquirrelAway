@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Layout, Icon, Text, Avatar } from "@ui-kitten/components";
+import { Button, Layout, Icon, Text, Avatar, Modal, Input, Card as CardUI } from "@ui-kitten/components";
 import { TopNav } from "./topNav.component";
 import { StyleSheet, SafeAreaView, ScrollView, StatusBar } from "react-native";
 
@@ -20,6 +20,7 @@ export const SavingsGroupScreen = ({ navigation }) => {
   const navigateToPage = (page) => {
     navigation.navigate(page);
   };
+  const [visible, setVisible] = React.useState(false);
 
   return (
     <>
@@ -76,16 +77,46 @@ export const SavingsGroupScreen = ({ navigation }) => {
             Towards a New Television
           </Text>
         </Layout>
-        <Card name="Jane Walter" avatar="photo.jpg" percent={39} />
-        <Card name="Randy Walter" avatar="photo.jpg" percent={24} />
-        <Card name="John Walter" avatar="photo.jpg" percent={18} />
-        <Card name="Michelle Walter" avatar="photo.jpg" percent={8} />
-        <Card name="Lone Walter" avatar="photo.jpg" percent={5} />
+        <Card name="Tom Walter" avatar={require("../assets/photo3.jpeg")} percent={39} />
+        <Card name="Randy Walter" avatar={require("../assets/photo2.jpg")} percent={24} />
+        <Card name="John Walter" avatar={require("../assets/photo.jpg")} percent={18} />
+        <Card name="Michelle Walter" avatar={require("../assets/photo1.jpg")} percent={8} />
+        <Card name="Alex Walter" avatar={require("../assets/photo4.jpg")} percent={5} />
         <Icon
           name="more-horizontal-outline"
           fill="gray"
           style={{ height: 30, width: 30 }}
         />
+        <Button appearance="outline"
+          style={{
+            marginVertical: 10,
+          }} onPress={() => setVisible(true)}>
+          Contribute
+      </Button>
+        <Modal backdropStyle={{
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+        }}
+          onBackdropPress={() => setVisible(false)}
+          style={{
+            width: "80%",
+          }} visible={visible}>
+          <CardUI disabled={true}>
+            <Text
+              style={{
+                fontSize: 25,
+                textAlign: "center",
+                fontFamily: "JosefinSans_500Medium",
+                marginVertical: 15,
+              }}
+            >
+              Contribute towards a new Television
+            </Text>
+            <Input placeholder="$" style={{ marginVertical: 5 }} />
+            <Button onPress={() => setVisible(false)}>
+              ADD
+          </Button>
+          </CardUI>
+        </Modal>
       </Layout>
     </>
   );
@@ -116,7 +147,7 @@ const Card = ({ name, avatar, percent }) => {
           borderWidth: 1,
           margin: 5,
         }}
-        source={require("../assets/photo.jpg")}
+        source={avatar}
       />
       <Text
         category="h4"

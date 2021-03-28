@@ -62,6 +62,7 @@ export const SavingsDashboardScreen = ({ navigation }) => {
         >
           {groups.map((e, i) => (
             <Card
+              key={i}
               name={e.name}
               handlePress={() => navigateToPage("Savings Group")}
             />
