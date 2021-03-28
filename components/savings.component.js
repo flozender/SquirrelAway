@@ -12,7 +12,7 @@ export const SavingsScreen = ({ navigation }) => {
 
   return (
     <>
-      <TopNav title={"Savings"} />
+      <TopNav title={"Savings"} navigation={navigation} />
       <Layout
         style={{
           flex: 1,
